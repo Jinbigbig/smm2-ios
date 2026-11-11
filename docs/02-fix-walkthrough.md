@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_8c5cc90addb611f19280525400393706
+    ReservedCode1: WavM0YtuctgAKB4wLEm53vpaQJG0yExGcn+hq5E1L3jlv6xT2X127IcwOFvtthYKUGRi3K1U11TGZ29MDAkEKhv8hxphZyEFGIYvoXt6hvOpoQAZDQEC0p2ZFCMn/3soJPINbrhM2ahmijgrJoRmfne3A8TeErtCDmmNob5MF77btcpc06CsjjLSczA=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_8c5cc90addb611f19280525400393706
+    ReservedCode2: WavM0YtuctgAKB4wLEm53vpaQJG0yExGcn+hq5E1L3jlv6xT2X127IcwOFvtthYKUGRi3K1U11TGZ29MDAkEKhv8hxphZyEFGIYvoXt6hvOpoQAZDQEC0p2ZFCMn/3soJPINbrhM2ahmijgrJoRmfne3A8TeErtCDmmNob5MF77btcpc06CsjjLSczA=
+---
+
 # 02 · 修复与出包全流程
 
 目标：`GUEST_ORIGIN = 0x400000000`，产出可侧载的 `SMM2Recomp.ipa`。
@@ -153,3 +164,4 @@ xcrun devicectl device copy from --device "$UDID" \
 ```
 
 成功判据见 [03-verification.md](03-verification.md)。
+*（内容由AI生成，仅供参考）*

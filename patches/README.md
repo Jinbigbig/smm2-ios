@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_8f206be5ddb611f19280525400393706
+    ReservedCode1: plGDAVVZHMFZmphcnv7RQKwBZcW1h4QjYfnYt5L2AQrPeTwMF1tSBfG1/MQEPvQhr8CC5s5K2VkY4Bm8mjNNIMbdoZCPBzKUwIP/Azp8rBvrgIvNian5fzM41OH6Mh3mvXAOz76HNMn4dmpTs7Bifmvnb88CXsaSHBdjkcQidfQTrj5+qB9GH5k+lxw=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_8f206be5ddb611f19280525400393706
+    ReservedCode2: plGDAVVZHMFZmphcnv7RQKwBZcW1h4QjYfnYt5L2AQrPeTwMF1tSBfG1/MQEPvQhr8CC5s5K2VkY4Bm8mjNNIMbdoZCPBzKUwIP/Azp8rBvrgIvNian5fzM41OH6Mh3mvXAOz76HNMn4dmpTs7Bifmvnb88CXsaSHBdjkcQidfQTrj5+qB9GH5k+lxw=
+---
+
 # patches · 需要关注的源码位置
 
 本目录不提供完整补丁文件（上游源码版本差异较大），改为标明**必须改动/确认的位置**与判断方法。
@@ -56,3 +67,4 @@ grep 'loaded main' ~/Downloads/smm2recomp.log   # 期望 400000000
 ## 5. 最小探针
 
 见 `scripts/va-probe.c`，用于在目标机型上实测本机 VA 上限，决定基址取值。
+*（内容由AI生成，仅供参考）*

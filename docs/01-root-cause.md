@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_8bb904e9ddb611f19280525400393706
+    ReservedCode1: 4V4tgKIOnIwCQd6RJSlnjM1wYPXpzNNP7aa3WJB47Hh6iE5bSnYOqYIHd317v15Gs+XjGOmaPh2/9/ttsUttRc3mXmzq3pvUvJIJoJZzaF/WYBcOJhTlIcaQvtX/YwB4vet2BFVtL3YLXWun6amBie4Xf90wmoleEhdtPYdID0SkB5GRuVjXtXB0ch4=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_8bb904e9ddb611f19280525400393706
+    ReservedCode2: 4V4tgKIOnIwCQd6RJSlnjM1wYPXpzNNP7aa3WJB47Hh6iE5bSnYOqYIHd317v15Gs+XjGOmaPh2/9/ttsUttRc3mXmzq3pvUvJIJoJZzaF/WYBcOJhTlIcaQvtX/YwB4vet2BFVtL3YLXWun6amBie4Xf90wmoleEhdtPYdID0SkB5GRuVjXtXB0ch4=
+---
+
 # 01 · 根因排查
 
 ## 1. 症状
@@ -36,7 +47,7 @@ security cms -D -i profile.mobileprovision > /tmp/prof.plist
 <key>com.apple.developer.kernel.extended-virtual-addressing</key><true/>
 <key>com.apple.developer.kernel.increased-debugging-memory-limit</key><true/>
 <key>com.apple.developer.kernel.increased-memory-limit</key><true/>
-<key>application-identifier</key><string>KWDVSU9C85.app.grape2286.yam856</string>
+<key>application-identifier</key><string>TEAMID0000.app.example.smm2</string>
 ```
 
 显式 App ID（非通配符），三项 kernel entitlement 齐备。
@@ -54,7 +65,7 @@ codesign -f -s "iPhone Distribution: xxx (TEAMID)" \
 
 ```
 MAGIC=0xfade7171 BLEN=562
-application-identifier = TEAMID.app.grape2286.yam856
+application-identifier = TEAMID0000.app.example.smm2
 com.apple.developer.kernel.extended-virtual-addressing = true
 com.apple.developer.kernel.increased-memory-limit = true
 com.apple.developer.kernel.increased-debugging-memory-limit = true
@@ -133,3 +144,4 @@ guest 地址是**编译期常量**：
 | `0x800000000` (32 GiB) | 窗口到 `0xA20000000`，探针 OK 但贴近上限，不同机型风险高 |
 
 窗口大小固定 `0x320000000`（12.8 GiB），选择基址时必须保证 `base + 0x320000000` 仍在实测上限内。
+*（内容由AI生成，仅供参考）*

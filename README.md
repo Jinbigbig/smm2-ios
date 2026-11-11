@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_8aaae858ddb611f19232525400248c00
+    ReservedCode1: 7xY+/+bTw6sU263sWchVmVLbP5sEAZUDBmvTiaJssO+QVqZhhEUi9S8XZGnaniB6Qyzl9YEmutKF52PGCNFxRDZ2Qj+yOyoOpUajaDwl5uBgDyZCVECVKJhN6O8Iu+FLY/MXAJKpEkl8XkQnEQ6jpf8nYdXQ5G6Pccs/mfM1jcEu12mZ32yIqBT8jK4=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_8aaae858ddb611f19232525400248c00
+    ReservedCode2: 7xY+/+bTw6sU263sWchVmVLbP5sEAZUDBmvTiaJssO+QVqZhhEUi9S8XZGnaniB6Qyzl9YEmutKF52PGCNFxRDZ2Qj+yOyoOpUajaDwl5uBgDyZCVECVKJhN6O8Iu+FLY/MXAJKpEkl8XkQnEQ6jpf8nYdXQ5G6Pccs/mfM1jcEu12mZ32yIqBT8jK4=
+---
+
 # smm2recomp iOS：guest 内存窗口基址修复
 
 让 [smm2recomp](https://github.com/) 重编译出的《超级马力欧制造 2》(Super Mario Maker 2, 3.0.3) iOS 版能在真实 iPhone 上启动运行。
@@ -131,3 +142,4 @@ loaded sdk   at 404000000 size cd4000 syms 25091
 
 - smm2recomp 作者与 runtime 维护者
 - 探针思路来自 recomp 社区对 iOS VA 上限的讨论
+*（内容由AI生成，仅供参考）*

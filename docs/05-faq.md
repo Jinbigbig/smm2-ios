@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_8e6aebedddb611f19280525400393706
+    ReservedCode1: P/IM3ms7q1OWSmPJm39RubA9e8g1Va6X3UKNYh3b5VOmbGcR6eKyBobQiK7XhU+pcenkpguA8un7ln3Jh+NlvOpfSiIlN80TuQHNv6O6xnPRzGRP5F+q5lWPS81/KiqWdpC4+TCYe4R+qmZmoEPtBYllud/+UqBT2TFNSg4YF55eYzSKe03p7LWWD28=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_8e6aebedddb611f19280525400393706
+    ReservedCode2: P/IM3ms7q1OWSmPJm39RubA9e8g1Va6X3UKNYh3b5VOmbGcR6eKyBobQiK7XhU+pcenkpguA8un7ln3Jh+NlvOpfSiIlN80TuQHNv6O6xnPRzGRP5F+q5lWPS81/KiqWdpC4+TCYe4R+qmZmoEPtBYllud/+UqBT2TFNSg4YF55eYzSKe03p7LWWD28=
+---
+
 # 05 · FAQ 与可选配置
 
 ## Q1 换基址后存档/数据要不要重做？
@@ -43,3 +54,4 @@ com.apple.developer.kernel.increased-debugging-memory-limit # 调试用（可选
 
 ## Q10 为什么 Web 上搜不到这套结论？
 recomp 类项目的 iOS 移植是小众路径，`GUEST_ORIGIN` 硬编码问题只在真机上暴露，Mac/Linux 端（VA 空间 47 bit/128 TB）永远踩不到。
+*（内容由AI生成，仅供参考）*
