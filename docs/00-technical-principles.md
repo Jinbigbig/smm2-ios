@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_fc6851f9ddc511f19232525400248c00
+    ReservedCode1: H/ipJ2p6kxrcMALFqMapPVX+RT4RzubpA3Yo0B+AB5RM7tIaYTMWeV7QRXpXlxCrWYZcBzYpayZbavsrbkY6swIxBiy0YUiLCv8oBFdmgejoEw32vudhLAVkuY8ZcKZ/aYXqEU1jIsKm1AQJLcuu+KHt/wzbEs5WZq+wLNEQWgY+/18PxpKGbtjtlEc=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_fc6851f9ddc511f19232525400248c00
+    ReservedCode2: H/ipJ2p6kxrcMALFqMapPVX+RT4RzubpA3Yo0B+AB5RM7tIaYTMWeV7QRXpXlxCrWYZcBzYpayZbavsrbkY6swIxBiy0YUiLCv8oBFdmgejoEw32vudhLAVkuY8ZcKZ/aYXqEU1jIsKm1AQJLcuu+KHt/wzbEs5WZq+wLNEQWgY+/18PxpKGbtjtlEc=
+---
+
 # 00 · 技术原理（完整版）
 
 本文解释三件事：**为什么这段代码必须把 guest 放在某个固定虚拟地址**、**为什么 iOS 上这个地址不能是 448 GiB**、**为什么修复只能落在编译期**。

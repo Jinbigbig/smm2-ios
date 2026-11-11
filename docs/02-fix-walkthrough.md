@@ -2,12 +2,14 @@
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: e72c8dc5665511fde1d076a99e405c04_8c5cc90addb611f19280525400393706
-    ReservedCode1: WavM0YtuctgAKB4wLEm53vpaQJG0yExGcn+hq5E1L3jlv6xT2X127IcwOFvtthYKUGRi3K1U11TGZ29MDAkEKhv8hxphZyEFGIYvoXt6hvOpoQAZDQEC0p2ZFCMn/3soJPINbrhM2ahmijgrJoRmfne3A8TeErtCDmmNob5MF77btcpc06CsjjLSczA=
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_fdaa1a1dddc511f19280525400393706
+    ReservedCode1: G4WVVaAavzpGOkm+StYbJAUANgFf9Iyx3TH8M2djV8lnLxH1Un9nof/1eX+R4c5d6Cg2A/5Xx94Ar49fSVEMOOKG0jFGmxcckaTZmhxSCbnNoHD4aq3JkESnpnmRixL0bwkR00PgwQxSZ/HTCVGblXVdQ/AWmY81J9DAyfy79+xiwkX7GuKHNZc6wlI=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: e72c8dc5665511fde1d076a99e405c04_8c5cc90addb611f19280525400393706
-    ReservedCode2: WavM0YtuctgAKB4wLEm53vpaQJG0yExGcn+hq5E1L3jlv6xT2X127IcwOFvtthYKUGRi3K1U11TGZ29MDAkEKhv8hxphZyEFGIYvoXt6hvOpoQAZDQEC0p2ZFCMn/3soJPINbrhM2ahmijgrJoRmfne3A8TeErtCDmmNob5MF77btcpc06CsjjLSczA=
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_fdaa1a1dddc511f19280525400393706
+    ReservedCode2: G4WVVaAavzpGOkm+StYbJAUANgFf9Iyx3TH8M2djV8lnLxH1Un9nof/1eX+R4c5d6Cg2A/5Xx94Ar49fSVEMOOKG0jFGmxcckaTZmhxSCbnNoHD4aq3JkESnpnmRixL0bwkR00PgwQxSZ/HTCVGblXVdQ/AWmY81J9DAyfy79+xiwkX7GuKHNZc6wlI=
 ---
+
+
 
 # 02 · 修复与出包全流程
 
@@ -164,4 +166,3 @@ xcrun devicectl device copy from --device "$UDID" \
 ```
 
 成功判据见 [03-verification.md](03-verification.md)。
-*（内容由AI生成，仅供参考）*

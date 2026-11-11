@@ -2,12 +2,14 @@
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: e72c8dc5665511fde1d076a99e405c04_8d168e18ddb611f19280525400393706
-    ReservedCode1: xvV4LLU/2bpDh/szUVUmCK2QmBRgLWdNaMN5fqMq8BUJz8abuvIsZRFI3tJyOdALc2QK0nNUn8/THJJuH8V3Su1b3EtWySkn/wO87YJiezDdXKJCi0t5j+Lo2P0+krvB7GEkpIBQmTRpRrS2fuAOFbyUXj1NBbSAYOucM+nHKFeaW8p6owBygJGtqM0=
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_fe4c2d91ddc511f19280525400393706
+    ReservedCode1: RP4/eIETjhugzUFvMLeDX9jeYPb8YNIjUwD0XTZo1I85DvMuqyrI4ZhwR9m4bOJ4VrI2HKVDQqwflm+Czwuxbd2GZ+jGtlXs+y07X7ZRmaE/3XKDqAnVRVKeirnHP0jgqpsfyDSxYmRehSHQ6IRjLYUGHWk3B0SpOTozbTt77iqtbf8d4YP1T6O/fZQ=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: e72c8dc5665511fde1d076a99e405c04_8d168e18ddb611f19280525400393706
-    ReservedCode2: xvV4LLU/2bpDh/szUVUmCK2QmBRgLWdNaMN5fqMq8BUJz8abuvIsZRFI3tJyOdALc2QK0nNUn8/THJJuH8V3Su1b3EtWySkn/wO87YJiezDdXKJCi0t5j+Lo2P0+krvB7GEkpIBQmTRpRrS2fuAOFbyUXj1NBbSAYOucM+nHKFeaW8p6owBygJGtqM0=
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_fe4c2d91ddc511f19280525400393706
+    ReservedCode2: RP4/eIETjhugzUFvMLeDX9jeYPb8YNIjUwD0XTZo1I85DvMuqyrI4ZhwR9m4bOJ4VrI2HKVDQqwflm+Czwuxbd2GZ+jGtlXs+y07X7ZRmaE/3XKDqAnVRVKeirnHP0jgqpsfyDSxYmRehSHQ6IRjLYUGHWk3B0SpOTozbTt77iqtbf8d4YP1T6O/fZQ=
 ---
+
+
 
 # 03 · 设备验证与实测数据
 
@@ -75,4 +77,3 @@ mem 2431 MB (4224 left)   → 场景切换后（大关卡/多人素材）
 - 首次启动需要写入 shader cache，约 10–20 s 黑屏，属正常。
 - 部分机型（内存 8 GB 以下 iPad / iPhone）在大型关卡可能触碰 jetsam，建议用 `0x300000000` 基址（窗口更靠低端，系统预留更多）观察。
 - 未实现手柄热插拔重连，需重启 App。
-*（内容由AI生成，仅供参考）*

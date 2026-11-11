@@ -2,12 +2,14 @@
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: e72c8dc5665511fde1d076a99e405c04_8dbbfd07ddb611f19232525400248c00
-    ReservedCode1: hGJOIuiRU9BSW8LH5UD2vOsorPkbvtGsk+z97wQYHBr/+pB5FR62ipvJMi4iiMBNkSYS+kxbqoTx1KDU38hzthFgcdU3pNR8bBW8Q+OramQ2CF8oADe27SxTy4ynSu7sV4D9lWqQmbNCcIvkpuLMsQ1tlVWnIBReQqR+1Hs8eEdKuwRCQm9a+6FqwiE=
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_fee6ce81ddc511f19232525400248c00
+    ReservedCode1: BAFlr3XoyhAnCf1i1WFjio5pTJAvcHSK4k+6m0B5/4FuvA7yj1jCPPKxv6uAbF5SaRYVwdBQuV5Y3j7mZLBahfJTIBMw2xnxRce6s3+mAKynpmKAeJi22GofYNBCO84KnH/TgCYHuxxvPH2YDiLU9za7pFVzGBSls2jy/Q78Wi90VGB6X0C3trh0xgs=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: e72c8dc5665511fde1d076a99e405c04_8dbbfd07ddb611f19232525400248c00
-    ReservedCode2: hGJOIuiRU9BSW8LH5UD2vOsorPkbvtGsk+z97wQYHBr/+pB5FR62ipvJMi4iiMBNkSYS+kxbqoTx1KDU38hzthFgcdU3pNR8bBW8Q+OramQ2CF8oADe27SxTy4ynSu7sV4D9lWqQmbNCcIvkpuLMsQ1tlVWnIBReQqR+1Hs8eEdKuwRCQm9a+6FqwiE=
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_fee6ce81ddc511f19232525400248c00
+    ReservedCode2: BAFlr3XoyhAnCf1i1WFjio5pTJAvcHSK4k+6m0B5/4FuvA7yj1jCPPKxv6uAbF5SaRYVwdBQuV5Y3j7mZLBahfJTIBMw2xnxRce6s3+mAKynpmKAeJi22GofYNBCO84KnH/TgCYHuxxvPH2YDiLU9za7pFVzGBSls2jy/Q78Wi90VGB6X0C3trh0xgs=
 ---
+
+
 
 # 04 · 踩坑清单
 
@@ -104,4 +106,3 @@ App 被杀后日志可能未 flush。用 `--console` 启动，或缩短日志 bu
 
 ### E3 报错文案具有误导性
 `... it must be signed with the Extended Virtual Addressing ...` 是兜底文案，任何 `mach_vm_allocate` 失败都会打这一句。**永远先看日志里的 `kern 12` / `errno=12`，再去查地址。**
-*（内容由AI生成，仅供参考）*

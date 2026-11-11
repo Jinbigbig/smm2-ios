@@ -2,12 +2,14 @@
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: e72c8dc5665511fde1d076a99e405c04_8f206be5ddb611f19280525400393706
-    ReservedCode1: plGDAVVZHMFZmphcnv7RQKwBZcW1h4QjYfnYt5L2AQrPeTwMF1tSBfG1/MQEPvQhr8CC5s5K2VkY4Bm8mjNNIMbdoZCPBzKUwIP/Azp8rBvrgIvNian5fzM41OH6Mh3mvXAOz76HNMn4dmpTs7Bifmvnb88CXsaSHBdjkcQidfQTrj5+qB9GH5k+lxw=
+    ProduceID: e72c8dc5665511fde1d076a99e405c04_00550775ddc611f19280525400393706
+    ReservedCode1: aG6KIWV/qMjbM/rKSLuR0pZ47YpBqi+1Cp0WmauhOGGfWC9y5tDof+srSpxRuzREUiGtJMMTDPdjo5+D8Qq98qL68Kq+bytNoirproy2SmGv/IcK/HQlGgjw2bx17qHDuoYjYjpkg44dINkBVAC1o0Rf+EyS8ES8sMJk0iFH+ZHv8XiJ8RcA3tgjj0Q=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: e72c8dc5665511fde1d076a99e405c04_8f206be5ddb611f19280525400393706
-    ReservedCode2: plGDAVVZHMFZmphcnv7RQKwBZcW1h4QjYfnYt5L2AQrPeTwMF1tSBfG1/MQEPvQhr8CC5s5K2VkY4Bm8mjNNIMbdoZCPBzKUwIP/Azp8rBvrgIvNian5fzM41OH6Mh3mvXAOz76HNMn4dmpTs7Bifmvnb88CXsaSHBdjkcQidfQTrj5+qB9GH5k+lxw=
+    PropagateID: e72c8dc5665511fde1d076a99e405c04_00550775ddc611f19280525400393706
+    ReservedCode2: aG6KIWV/qMjbM/rKSLuR0pZ47YpBqi+1Cp0WmauhOGGfWC9y5tDof+srSpxRuzREUiGtJMMTDPdjo5+D8Qq98qL68Kq+bytNoirproy2SmGv/IcK/HQlGgjw2bx17qHDuoYjYjpkg44dINkBVAC1o0Rf+EyS8ES8sMJk0iFH+ZHv8XiJ8RcA3tgjj0Q=
 ---
+
+
 
 # patches · 需要关注的源码位置
 
@@ -67,4 +69,3 @@ grep 'loaded main' ~/Downloads/smm2recomp.log   # 期望 400000000
 ## 5. 最小探针
 
 见 `scripts/va-probe.c`，用于在目标机型上实测本机 VA 上限，决定基址取值。
-*（内容由AI生成，仅供参考）*
