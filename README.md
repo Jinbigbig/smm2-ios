@@ -102,6 +102,7 @@ loaded sdk   at 404000000 size cd4000 syms 25091
 
 | 文件 | 内容 |
 |---|---|
+| [docs/00-technical-principles.md](docs/00-technical-principles.md) | **技术原理完整版**：静态重编译地址模型、guest 布局、Mach VM 预留语义、iOS VA 上限、VA 与 footprint 两种内核资源、渲染链路、四种"省事方案"为何都不行 |
 | [docs/01-root-cause.md](docs/01-root-cause.md) | 排查全过程：为何不是签名问题、VA 探针方法与数据 |
 | [docs/02-fix-walkthrough.md](docs/02-fix-walkthrough.md) | 从改基址到产出 IPA 的完整步骤与耗时 |
 | [docs/03-verification.md](docs/03-verification.md) | 设备验证：日志判读、性能、内存上限 |
