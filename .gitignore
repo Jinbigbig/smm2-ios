@@ -1,0 +1,37 @@
+# 构建产物
+generated/
+ios-build/
+build/
+Payload/
+*.ipa
+*.app/
+*.dSYM/
+*.o
+*.a
+
+# 游戏数据与密钥，绝不入库
+private/
+*.nsp
+*.xci
+*.nsz
+prod.keys
+title.keys
+*.tik
+*.cert
+extracted/
+romfs.bin
+exefs/
+
+# 签名资产
+*.p12
+*.mobileprovision
+*.provisionprofile
+*.cer
+密钥*
+密码.txt
+
+# 日志与临时文件
+*.log
+smm2recomp.log
+.DS_Store
+__MACOSX/
