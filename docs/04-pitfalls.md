@@ -106,3 +106,50 @@ App 被杀后日志可能未 flush。用 `--console` 启动，或缩短日志 bu
 
 ### E3 报错文案具有误导性
 `... it must be signed with the Extended Virtual Addressing ...` 是兜底文案，任何 `mach_vm_allocate` 失败都会打这一句。**永远先看日志里的 `kern 12` / `errno=12`，再去查地址。**
+
+## F. 签名、脚本与配置分发（OCW 联机阶段新增）
+
+### F1 `errSecInternalComponent` 且 `0 valid identities found`
+**症状**：`codesign --force --sign <SHA-1>` 对 IPA 与最小可执行体都返回 `errSecInternalComponent`，退出码时 0 时 1；`security find-identity -p codesigning` 显示 `0 valid identities found`，但 `security dump-keychain` 里**看得到**该证书。
+
+**原因**（两层，常叠加）：
+
+1. **缺中间证书**。证书本身在钥匙串里，但 Apple WWDR 中间证书缺失，证书链建立失败。`security verify-cert -c cert.pem -p codesigning` 会返回 `CSSMERR_TP_NOT_TRUSTED`，甚至 `policy creation failed for codesigning`。
+2. **search list 指向了已删除的钥匙串**。`security list-keychains` 中残留临时钥匙串路径（如 `/private/tmp/xxx.keychain-db`），而该文件已被删。此时 `security unlock-keychain -p ""` 报 "could not be found"，identity 从列表里整体消失。
+
+**处理**：
+
+```bash
+# 1) 清掉 search list 中不存在的钥匙串
+security list-keychains -d user
+security list-keychains -d user -s ~/Library/Keychains/login.keychain-db /Library/Keychains/System.keychain
+
+# 2) 确认证书在 login 钥匙串（不是某个副本文件里）
+security find-certificate -a -c "iPhone Distribution" -Z ~/Library/Keychains/login.keychain-db | head
+
+# 3) 装中间证书后验证
+security verify-cert -c "$(mktemp).pem" -p codesigning   # 应无 CSSMERR
+security find-identity -p codesigning                    # 应列出 1 valid identity
+```
+
+**兜底**：签名链路修不好时不阻塞发布——走**脱壳无签名**路线，产出未签名 IPA 交给侧载工具签名（见 `scripts/strip-sign-ipa.sh`）。本次实操即因此改为脱壳路线。
+
+### F2 `make app` 报 `Permission denied`
+**症状**：`tools/make_ios_app.sh: Permission denied`，或 `precompile_shaders.sh` 无输出直接失败。
+**原因**：脚本从仓库拉下来丢执行位。
+**处理**：`chmod +x tools/*.sh`。这类问题会伪装成"编译失败"，先看有没有 `Permission denied` 字样。
+
+### F3 `.app/data/` 里放了配置，游戏仍然不读
+**症状**：`ocw-config.json` 与 `smm2mods.ini` 确实在包内 `data/` 下，但日志仍有 `no ocw-config.json ... stays off`。
+**原因**：`ios_link_bundle_data()` 的白名单只有 `extracted` / `fonts` / `sysdata` / `metallib` / `smm1`，配置文件不在其中，不会被搬进沙箱。
+**处理**：改 `runtime/paths.c` 加首启复制（见 [07-settings-in-bundle.md](07-settings-in-bundle.md)），或装完用 `scripts/push-ocw.sh` 手动推。
+
+### F4 首启复制只发生一次
+**症状**：第二次启动后日志里不再出现 `[paths] ocw-config.json copied from the app`，误以为没生效。
+**原因**：`ios_seed_bundle_config()` 以"沙箱里是否已存在"为准，已存在就跳过——这是刻意的，避免覆盖用户改过的配置。
+**处理**：这不是故障。要强制重新落默认值，删掉沙箱 `Documents/` 下对应文件，或卸载重装。
+
+### F5 配置推完不生效
+**症状**：文件已就位，回读校验也一致，游戏里还是连不上。
+**原因**：后端配置**只在启动时读一次**。
+**处理**：冷启动。`xcrun devicectl device process launch --terminate-existing <bundle id>`，不要只从后台切前台。
