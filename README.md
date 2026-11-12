@@ -110,6 +110,8 @@ loaded sdk   at 404000000 size cd4000 syms 25091
 | [docs/03-verification.md](docs/03-verification.md) | 设备验证：日志判读、性能、内存上限 |
 | [docs/04-pitfalls.md](docs/04-pitfalls.md) | 踩坑清单（编译、部署、签名、打包） |
 | [docs/05-faq.md](docs/05-faq.md) | 常见问题与可选基址 |
+| [docs/06-ocw-online.md](docs/06-ocw-online.md) | 联机：OpenCourse World 方案、配置契约、日志验收与网络排查顺序 |
+| [docs/07-settings-in-bundle.md](docs/07-settings-in-bundle.md) | 让配置随包走：首启自复制（`paths.c` + `make_ios_app.sh`） |
 
 ## 5. 脚本
 
@@ -119,6 +121,7 @@ loaded sdk   at 404000000 size cd4000 syms 25091
 | `scripts/deploy-device.sh` | 安装到设备 + 推送游戏数据 + 回抓运行日志 |
 | `scripts/strip-sign-ipa.sh` | 脱壳：剥离 `_CodeSignature` / `embedded.mobileprovision` / 二进制签名 |
 | `scripts/sign-ipa.sh` | 用指定证书 + profile 重签 IPA |
+| `scripts/push-ocw.sh` | 把 OCW 配置推入设备沙箱 `Documents/`（重装后补配置） |
 
 ```bash
 # 典型流程
